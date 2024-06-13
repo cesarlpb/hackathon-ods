@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const Categories = () => {
   const [categoryInput, setCategoryInput] = useState('');
   const [categories, setCategories] = useState([
-    { id: 1, name: "Literature" },
+    { id: 1, name: "Geography" },
     { id: 2, name: "Mathematics" },
     { id: 3, name: "History" },
     { id: 4, name: "Technology" }

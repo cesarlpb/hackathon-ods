@@ -2,12 +2,12 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const Index = () => {
-    const items = ["Literature", "Mathematics", "History", "Technology"];
+    const items = ["Geography", "Mathematics", "History", "Technology"];
     const categories = [];
 
     items.forEach((item, index) => {
         index++;
-        categories.push(<button className="category" id={`${index}`} key={index}><a>{item}</a></button>)
+        categories.push(<Link to="/room"><button className="category" id={`${index}`} key={index}><a>{item}</a></button></Link>)
     });
 
     return (
@@ -32,9 +32,9 @@ const Index = () => {
                     <button id="newRoom" disabled={true}>Create new room &#40;play online&#41;</button>
                     <p id="disclaimer">Not yet available!</p>
                 </div>
-                <div id="userActions-container">
+                {/* <div id="userActions-container">
                     <button id="closeSession">Close session</button>
-                </div>
+                </div> */}
             </aside>
         </main>
     </div>

@@ -13,7 +13,7 @@
         {
             "id": 3,
             "question": "¿Cuál es la capital de Brasil?",
-            "answer": "Río de Janeiro"
+            "answer": "Brasilia"
         },
         {
             "id": 4,
@@ -24,6 +24,11 @@
             "id": 5,
             "question": "¿Cuál es la capital de Rusia?",
             "answer": "Moscú"
+        },
+        {
+            "id": 6,
+            "question": "¿Cuántos km hay desde España hasta Francia aproximadamente?",
+            "answer": "500"
         }
     ]
 }

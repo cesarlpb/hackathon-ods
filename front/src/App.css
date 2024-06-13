@@ -67,13 +67,13 @@ button:disabled {
   text-transform: uppercase;
 }
 #home-container button.category {
-  width: 30%;
+  width: 250px;
   margin: 1em;
   background-color: #95C495;
   transition: .3s ease-out;
 }
 #home-container button.category:hover {
-  width: 35%;
+  width: 300px;
   transition: .3s ease-out;
 }
 #home-container .category a {
@@ -119,4 +119,12 @@ button:disabled {
 #flashcards-container main, #categories-container main {
   border: none;
   display: block;
+}
+
+/* Room */
+div#question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
 }

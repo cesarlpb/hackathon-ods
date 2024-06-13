@@ -7,6 +7,7 @@ import './index.css'
 import Flashcards from './pages/Flashcards.jsx'
 import Categories from './pages/Categories.jsx'
 import Login from './pages/Login.jsx'
+import './App.css'
 
 const router = createBrowserRouter([
   {
