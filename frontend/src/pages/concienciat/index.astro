@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+const response = await fetch('https://world.openfoodfacts.org/api/v3/product/5060337500982');
+const monsterJSON = await response.json();
+const response2 = await fetch('https://world.openfoodfacts.org/api/v3/product/8425561010015')
+const aguaJSON = await response2.json()
+import monster from "@imgs/monster.webp"
+import agua from "@imgs/agua.jpg"
+import Layout from '../../Layouts/Layout.astro'
+---
+
+<Layout>
+  <main>
+
+    <article class='flex flex-col mx-auto my-10'>
+      <div class="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md md:max-w-2xl">
+        <div class="md:flex">
+          <div class="md:flex-shrink-0">
+            <Image src={monster} alt="Monster" class="rounded-full w-32 self-center"/>
+          </div>
+          <div class="p-8">
+            <div class="uppercase tracking-wide text-sm text-indigo-800 font-semibold">Bebidas</div>
+            <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Monster</a>
+              <p class='grid grid-cols-2 text-xs'>
+                Grasas cada 100g: {monsterJSON['product']['nutriments']['fat_100g']}
+                Energia cada 100g: {monsterJSON['product']['nutriments']['energy_100g']}
+                Salt cada 100g: {monsterJSON['product']['nutriments']['salt_100g']}
+                Azucar cada 100g: {monsterJSON['product']['nutriments']['sugar_100g']}
+                Carbohidratos cada 100g: {monsterJSON['product']['nutriments']['carbohydrates_100g']}
+              </p>
+            </div>
+        </div>
+      </div>
+    </article>
+
+    <article class='flex flex-col mx-auto my-10'>
+      <div class="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md md:max-w-2xl">
+        <div class="md:flex">
+          <div class="md:flex-shrink-0">
+            <Image src={agua} alt="Monster" class="rounded-full w-32 self-center"/>
+          </div>
+          <div class="p-8">
+            <div class="uppercase tracking-wide text-sm text-indigo-800 font-semibold">Bebidas</div>
+            <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Agua</a>
+              <p class='grid grid-cols-2 text-xs'>
+                Grasas cada 100g: {aguaJSON['product']['nutriscore']['2021']['data']['is_fat']}
+                Energia cada 100g: {aguaJSON['product']['nutriscore']['2021']['data']['energy_points']}
+                Salt cada 100g: {aguaJSON['product']['nutriscore']['2021']['data']['sodium_points']}
+                Azucar cada 100g: {aguaJSON['product']['nutriscore']['2021']['data']['sugars_points']}
+                Carbohidratos cada 100g: {aguaJSON['product']['nutriscore']['2021']['data']['fiber']}
+              </p>
+            </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>

@@ -1,0 +1,17 @@
+---
+import Image from "astro/components/Image.astro";
+import logo from "@imgs/logo.jpeg"
+---
+
+<nav class="bg-gray-800 space-x-8">
+  <div class="mx-auto px-4 py-2 flex items-center w-full">
+    <Image src={logo} alt="Logo" class="rounded-full my-4 w-12 ml-4 mr-6 self-center"/>
+    <a href="/" class="text-white font-semibold text-lg mr-4 font-extrabold">FoodAtic</a>
+    <ul class="flex place-content-center justify-center space-x-4 h-full">
+      <li><a class="no-underline text-white" href="/">Inicio</a></li>
+      <li><a class="no-underline text-white" href="/llistat">Calcula tu compra</a></li>
+      <li><a class="no-underline text-white" href="/concienciat">Conciencia't</a></li>
+      <li><a class="no-underline text-white" href="/onu">ONU bases</a></li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,128 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+---
+
+
+<Layout>
+	<section>
+		<div class="block w-full overflow-x-auto">
+			<table class="items-center bg-transparent w-full border-collapse ">
+			  <thead>
+				<tr>
+				  <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+								Producto
+							  </th>
+				<th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+								Calorías
+							  </th>
+				 <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+								Carbohidratos
+							  </th>
+				<th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+								Azucares
+							  </th>
+				<th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+								Grasas
+							</th>
+				</tr>
+			  </thead>
+	  
+			  <tbody>
+				<tr>
+				  <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+					Manzana
+				  </th>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+					52 kcal
+				  </td>
+				  <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					14 g
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					10 g
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					<i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
+					Muy Bajas
+				  </td>
+				</tr>
+				<tr>
+				  <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
+					Arroz Integral	
+				</th>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					111 kcal
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					23 g
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					Bajo en azucares
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					<i class="fas fa-arrow-down text-orange-500 mr-4"></i>
+					Pequeña cantidad de grasas saludables
+				  </td>
+				</tr>
+				<tr>
+				  <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
+					Yogurt Natural
+				  </th>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					61 kcal
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					4 g
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					Bajos en azucares naturales
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					<i class="fas fa-arrow-down text-orange-500 mr-4"></i>
+					Bajos en grasas
+				  </td>
+				</tr>
+				<tr>
+				  <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
+					Pechuga de pollo a la parrilla
+				  </th>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					165 kcal
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					Muy Bajo en carbohidratos
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					Sin azucares añadidos
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					<i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
+					Bajas en grasas, sobretodo sin piel
+				  </td>
+				</tr>
+				<tr>
+				  <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
+					Aguacate
+				  </th>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					160 kcal
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					9 g
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					Bajos en azucares naturales
+				  </td>
+				  <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+					<i class="fas fa-arrow-down text-red-500 mr-4"></i>
+					Rica en grasas naturales (monoinsaturadas)
+				  </td>
+				</tr>
+			  </tbody>
+	  
+			</table>
+	</section>
+
+
+</Layout>

@@ -1,0 +1,56 @@
+---
+// src/components/Grafic.astro
+
+---
+
+<canvas id="grafica" data-api-url={API_URL}></canvas>
+
+<script>
+  // Función para obtener los datos de la API y crear la gráfica
+  async function obtenerDatosYCrearGrafica() {
+    try {
+      const $grafica = document.querySelector("#grafica") as HTMLCanvasElement;
+      const API_URL = $grafica.dataset.apiUrl;
+
+      const respuesta = await fetch(API_URL);
+      const datos = await respuesta.json();
+
+      // Obtener las categorías del producto
+      const etiquetas = datos.product.categories;
+
+      // Obtener los nutrientes del producto
+      const nutrientes = datos.product.nutriments;
+      console.log('Datos:', nutrientes);
+
+      // Crear los datos para la gráfica
+      const datosIngresos = {
+        datos: Object.values(nutrientes),
+        backgroundColor: [
+          'rgba(163,221,203,0.2)',
+          'rgba(232,233,161,0.2)',
+          'rgba(230,181,102,0.2)',
+        ],
+        borderColor: [
+          'rgba(163,221,203,1)',
+          'rgba(232,233,161,1)',
+          'rgba(230,181,102,1)',
+        ],
+        borderWidth: 1,
+      };
+
+      // Crear la gráfica
+      new Chart($grafica, {
+        type: 'pie',
+        data: {
+          labels: etiquetas,
+          datasets: [datosIngresos],
+        },
+      });
+    } catch (error) {
+      console.error('Error al obtener los datos:', error);
+    }
+  }
+
+  // Llamar a la función obtenerDatosYCrearGrafica después de que la página se haya cargado
+  window.addEventListener('load', obtenerDatosYCrearGrafica);
+</script>
