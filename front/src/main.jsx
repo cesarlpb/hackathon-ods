@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import Index from './pages/Index.jsx'
 import Room from './pages/Room.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
