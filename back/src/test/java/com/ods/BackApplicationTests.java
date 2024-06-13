@@ -1,4 +1,4 @@
-package com.jj;
+package com.ods;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
