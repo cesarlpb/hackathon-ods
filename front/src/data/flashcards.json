@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Flashcard 1",
+        "questions": [
+        "What year was Treasure Island published?",
+        "What genre does Treasure Island belong to?"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Flashcard 2",
+        "questions": [
+        "What are some applications of mathematics in daily life?",
+        "Name some famous mathematicians."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Flashcard 3",
+        "questions": [
+        "What are the causes of World War II?",
+        "What were the major events of World War II?"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Flashcard 4",
+        "questions": [
+        "What are the latest advancements in technology?",
+        "How has technology impacted society?"
+        ]
+    }
+]

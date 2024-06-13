@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Index = () => {
     const items = ["Literature", "Mathematics", "History", "Technology"];
@@ -20,8 +21,16 @@ const Index = () => {
             </section>
             <aside id="aside-container">
                 <div id="create-container">
-                    <button id="newCategory">Create new category</button>
-                    <button id="newFlashCard">Create new flashcard</button>
+                    <Link to="/categories">
+                        <button id="newCategory">Create new category</button>
+                    </Link>
+                    <Link to="/flashcards">
+                        <button id="newFlashCard">Create new flashcard</button>
+                    </Link>
+                </div>
+                <div id="createRoom-container">
+                    <button id="newRoom" disabled={true}>Create new room &#40;play online&#41;</button>
+                    <p id="disclaimer">Not yet available!</p>
                 </div>
                 <div id="userActions-container">
                     <button id="closeSession">Close session</button>
