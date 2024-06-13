@@ -82,6 +82,8 @@ Los proyectos serán evaluados según los siguientes criterios:
 4. **Presentación** (20%)
    - Claridad y efectividad de la presentación final.
 
+Más sobre los criterios en [criterios](./CRITERIOS.md).
+
 ### Premios
 
 - **Premios de las empresas patrocinadoras**.
