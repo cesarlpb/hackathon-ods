@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/CSS/contacto.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="absolute inset-x-0 top-0 z-50" style="z-index: 2; background-color: white;">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="/HTML/index.html" class="-m-1.5 p-1.5">
+          <span class="sr-only">Empresa ejemplo</span>
+          <img class="h-8 w-auto" src="/IMG/logo.png" alt="">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          onclick="showMenu()">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="/HTML/index.html" class="text-sm font-semibold leading-6 text-gray-900">Inicio</a>
+        <a href="/HTML/nosotros.html" class="text-sm font-semibold leading-6 text-gray-900">Acerca de</a>
+        <a href="./noticias.html" class="text-sm font-semibold leading-6 text-gray-900">Noticias</a>
+        <a href="/HTML/ong.html" class="text-sm font-semibold leading-6 text-gray-900">ONGs</a>
+        <a href="/HTML/empresa.html" class="text-sm font-semibold leading-6 text-gray-900">Empresas</a>
+        <a href="/HTML/donaciones.html" class="text-sm font-semibold leading-6 text-gray-900">Donaciones</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="/HTML/login.html" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
+            aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="hidden lg:hidden" role="dialog" aria-modal="true" id="menu-lateral">
+      <!-- Background backdrop, show/hide based on slide-over state. -->
+      <div class="fixed inset-0 z-50"></div>
+      <div
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-8 w-auto" src="/IMG/logo.png" alt="">
+          </a>
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="cruz-lateral-navbar"
+            onclick="hiddenMenu()">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a href="/HTML/index.html"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inicio</a>
+              <a href="/HTML/nosotros.html"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Acerca
+                de</a>
+              <a href="/HTML/noticias.html"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Noticias</a>
+              <a href="/HTML/ong.html"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ONGs</a>
+              <a href="/HTML/empresa.html"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Empresas</a>
+              <a href="/HTML/donaciones.html"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Donaciones</a>
+            </div>
+            <div class="py-6">
+              <a href="/HTML/login.html"
+                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log
+                in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto max-w-7x1">
+      <div class="flex flex-wrap w-full mb-4 p-4">
+        <div class="w-full mb-6 lg:mb-0">
+          <h1 class="sm:text-4xl text-5xl font-medium font-bold title-font mb-2 text-gray-900">Empresas Innovadoras</h1>
+          <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+        </div>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <!-- NutriVida: Empresa de alimentos orgánicos -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="bg-white p-6 rounded-lg">
+            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6"
+              src="../IMG/NutriVidad.jfif" alt="NutriVida">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Sector Alimentación</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">NutriVida</h2>
+            <p class="leading-relaxed text-base">Empresa dedicada a la producción y distribución de alimentos orgánicos
+              y suplementos nutricionales. Su misión es promover una alimentación saludable y sostenible.</p>
+          </div>
+        </div>
+        <!-- TecnoInnovate: Empresa de desarrollo de software -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="bg-white p-6 rounded-lg">
+            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6"
+              src="../IMG/TecnoInovate.jpeg" alt="TecnoInnovate">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Sector Tecnología</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">TecnoInnovate</h2>
+            <p class="leading-relaxed text-base">Compañía de desarrollo de software especializada en soluciones de
+              inteligencia artificial y machine learning para optimizar procesos empresariales y mejorar la toma de
+              decisiones.</p>
+          </div>
+        </div>
+        <!-- EcoEnergía: Empresa de energía renovable -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="bg-white p-6 rounded-lg">
+            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6"
+              src="../IMG/Ecoelengiia.jfif" alt="EcoEnergía">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Sector Energía</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">EcoEnergía</h2>
+            <p class="leading-relaxed text-base">Empresa de energía renovable que se centra en la producción de
+              electricidad a partir de fuentes solares y eólicas, buscando reducir la dependencia de combustibles
+              fósiles y minimizar el impacto ambiental.</p>
+          </div>
+        </div>
+        <!-- AquaPure: Empresa de tratamiento de agua -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="bg-white p-6 rounded-lg">
+            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6"
+              src="../IMG/Acuapure.jfif" alt="AquaPure">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Sector Agua</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">AquaPure</h2>
+            <p class="leading-relaxed text-base">Empresa de tratamiento y purificación de agua que ofrece sistemas
+              avanzados para garantizar el acceso a agua potable limpia y segura en comunidades urbanas y rurales.</p>
+          </div>
+        </div>
+        <!-- FitTech: Empresa de tecnología fitness -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="bg-white p-6 rounded-lg">
+            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6"
+              src="../IMG/FundacionEsplai.jfif" alt="FitTech">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Sector Tecnología</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Fundación Esplai</h2>
+            <p class="leading-relaxed text-base">Empresa tecnológica que desarrolla dispositivos wearables y
+              aplicaciones móviles enfocadas en la salud y el fitness, proporcionando datos y análisis para mejorar el
+              rendimiento físico y el bienestar general.</p>
+          </div>
+        </div>
+        <!-- BioMed Solutions: Empresa de biotecnología -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="bg-white p-6 rounded-lg">
+            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6"
+              src="../IMG/BioMed.jfif" alt="BioMed Solutions">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Sector Biotecnología</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">BioMed Solutions</h2>
+            <p class="leading-relaxed text-base">Compañía de biotecnología que investiga y desarrolla tratamientos
+              innovadores para enfermedades crónicas y genéticas, utilizando tecnología de punta en terapias génicas y
+              celulares.</p>
+          </div>
+        </div>
+        <!-- GreenLogistics: Empresa de logística sostenible -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="bg-white p-6 rounded-lg">
+            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6"
+              src="../IMG/GreenLogistic.jfif" alt="GreenLogistics">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Sector Logística</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">GreenLogistics</h2>
+            <p class="leading-relaxed text-base">Empresa de logística y transporte que se especializa en soluciones
+              sostenibles, utilizando vehículos eléctricos y estrategias de optimización para reducir la huella de
+              carbono en la cadena de suministro.</p>
+          </div>
+        </div>
+        <!-- SmartHome Innovations: Empresa de automatización del hogar -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="bg-white p-6 rounded-lg">
+            <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6"
+              src="../IMG/SmartHome Innovations.jpeg" alt="SmartHome Innovations">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Sector Domótica</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">SmartHome Innovations</h2>
+            <p class="leading-relaxed text-base">Empresa dedicada a la creación de sistemas de automatización del hogar
+              que integran dispositivos inteligentes para mejorar la seguridad, eficiencia energética y comodidad de los
+              usuarios.</p>
+          </div>
+        </div>
+        <!-- UrbanFarmers: Empresa de agricultura urbana -->
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="bg-white p-6 rounded-lg">
+            <img class="lg:h-60 xl:h-56 md:h-64 sm
+                    xs
+                    h-72 rounded w-full object-cover object-center mb-6" src="../IMG/UrbanFarmers.jpeg" alt="UrbanFarmers">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Sector Agricultura</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">UrbanFarmers</h2>
+            <p class="leading-relaxed text-base">Empresa agrícola urbana que implementa técnicas de cultivo vertical y
+              hidropónico para producir alimentos frescos y locales en espacios urbanos, reduciendo la dependencia de
+              las importaciones y los costos de transporte.</p>
+          </div>
+        </div>
+
+
+  </section>
+
+</body>
+
+</html>

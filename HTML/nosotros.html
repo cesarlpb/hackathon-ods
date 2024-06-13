@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/CSS/contacto.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+      <header class="absolute inset-x-0 top-0 z-50" style="z-index: 2; background-color: white;">
+        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="/HTML/index.html" class="-m-1.5 p-1.5">
+              <span class="sr-only">Empresa ejemplo</span>
+              <img class="h-8 w-auto" src="/IMG/logo.png" alt="">
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" onclick="showMenu()">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="/HTML/index.html" class="text-sm font-semibold leading-6 text-gray-900">Inicio</a>
+            <a href="/HTML/nosotros.html" class="text-sm font-semibold leading-6 text-gray-900">Acerca de</a>
+            <a href="./noticias.html" class="text-sm font-semibold leading-6 text-gray-900">Noticias</a>
+            <a href="/HTML/ong.html" class="text-sm font-semibold leading-6 text-gray-900">ONGs</a>
+            <a href="/HTML/empresa.html" class="text-sm font-semibold leading-6 text-gray-900">Empresas</a>
+            <a href="/HTML/donaciones.html" class="text-sm font-semibold leading-6 text-gray-900">Donaciones</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="/HTML/login.html" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="hidden lg:hidden" role="dialog" aria-modal="true" id="menu-lateral">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-50"></div>
+          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-8 w-auto" src="/IMG/logo.png" alt="">
+              </a>
+              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="cruz-lateral-navbar" onclick="hiddenMenu()">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a href="/HTML/index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inicio</a>
+                  <a href="/HTML/nosotros.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Acerca de</a>
+                  <a href="/HTML/noticias.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Noticias</a>
+                  <a href="/HTML/ong.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ONGs</a>
+                  <a href="/HTML/empresa.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Empresas</a>
+                  <a href="/HTML/donaciones.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Donaciones</a>
+                </div>
+                <div class="py-6">
+                  <a href="/HTML/login.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+          <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+          </div>
+
+            </div>
+            <div class="text-center" id="somos">
+              <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mt-11 m-5">Quienes somos</h1>
+              <p class="mt-6 text-lg leading-8 text-gray-600 m-5">Somos una plataforma dedicada a conectar empresas con organizaciones no gubernamentales (ONG). Nuestro objetivo es facilitar colaboraciones estratégicas que generen un impacto positivo en la sociedad. A través de nuestra página, promovemos el compromiso social y la responsabilidad corporativa, creando puentes entre el sector empresarial y las ONG para impulsar proyectos y causas que beneficien a nuestras comunidades.</p>
+            </div>
+            <div class="text-center" id="equipo">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl m-5">Equipo</h1>
+                <p class="mt-6 text-lg leading-8 text-gray-600 m-5">Contamos con un equipo apasionado y comprometido con la misión de conectar empresas y ONG. Cada miembro aporta su experiencia y dedicación para generar un impacto positivo en la sociedad. Juntos, trabajamos para construir alianzas que transformen vidas y comunidades.</p>
+              </div>
+              <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
+                <div class="container">
+                   <div class="flex flex-wrap" style="align-items: center; justify-content: center; width: 100vw;">
+                      <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                         <div class=" bg-[#F3F4F6] rounded-lg overflow-hidden mb-10">
+                            <img
+                               src="/IMG/Glenn.jpg"
+                               alt="image"
+                               class="w-full"
+                               />
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                               <h3>
+                                  <a
+                                     href="javascript:void(0)"
+                                     class="
+                                     font-semibold
+                                     text-dark text-xl
+                                     sm:text-[22px]
+                                     md:text-xl
+                                     lg:text-[22px]
+                                     xl:text-xl
+                                     2xl:text-[22px]
+                                     mb-4
+                                     block
+                                     hover:text-primary
+                                     "
+                                     >
+                                  GLENN
+                                  </a>
+                               </h3>
+                               <p class="text-base text-body-color leading-relaxed">
+                                  Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                  elit. Lorem consectetur adipiscing elit.
+                               </p>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                        <div class=" bg-[#F3F4F6] rounded-lg overflow-hidden mb-10">
+                           <img
+                              src="/IMG/Jay.jpg"
+                              alt="image"
+                              class="w-full"
+                              />
+                           <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                              <h3>
+                                 <a
+                                    href="javascript:void(0)"
+                                    class="
+                                    font-semibold
+                                    text-dark text-xl
+                                    sm:text-[22px]
+                                    md:text-xl
+                                    lg:text-[22px]
+                                    xl:text-xl
+                                    2xl:text-[22px]
+                                    mb-4
+                                    block
+                                    hover:text-primary
+                                    "
+                                    >
+                                 JAY MARC PARAGAS
+                                 </a>
+                              </h3>
+                              <p class="text-base text-body-color leading-relaxed">
+                                 Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                 elit. Lorem consectetur adipiscing elit.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                      <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                         <div class=" bg-[#F3F4F6] rounded-lg overflow-hidden mb-10">
+                            <img
+                               src="/IMG/Cristian.jpg"
+                               alt="image"
+                               class="w-full"
+                               />
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                               <h3>
+                                  <a
+                                     href="javascript:void(0)"
+                                     class="
+                                     font-semibold
+                                     text-dark text-xl
+                                     sm:text-[22px]
+                                     md:text-xl
+                                     lg:text-[22px]
+                                     xl:text-xl
+                                     2xl:text-[22px]
+                                     mb-4
+                                     block
+                                     hover:text-primary
+                                     "
+                                     >
+                                  CRISTIAN PANCHE
+                                  </a>
+                               </h3>
+                               <p class="text-base text-body-color leading-relaxed">
+                                  Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                  elit. Lorem consectetur adipiscing elit.
+                               </p>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                         <div class=" bg-[#F3F4F6] rounded-lg overflow-hidden mb-10">
+                            <img
+                               src="/IMG/Gerard.jpg"
+                               alt="image"
+                               class="w-full"
+                               />
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                               <h3>
+                                  <a
+                                     href="javascript:void(0)"
+                                     class="
+                                     font-semibold
+                                     text-dark text-xl
+                                     sm:text-[22px]
+                                     md:text-xl
+                                     lg:text-[22px]
+                                     xl:text-xl
+                                     2xl:text-[22px]
+                                     mb-4
+                                     block
+                                     hover:text-primary
+                                     "
+                                     >
+                                  GERARD VELLO
+                                  </a>
+                               </h3>
+                               <p class="text-base text-body-color leading-relaxed">
+                                  Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                                  elit. Lorem consectetur adipiscing elit.
+                               </p>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </section>
+    </div>
+
+          <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- contacto -->
+      <div class="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
+        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+            <div class="mt-8 overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
+                        <h1 class="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
+                            Ponte en contacto!
+                        </h1>
+                        <p class="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
+                            Envianos tus datos para ponernos en contacto
+                        </p>
+
+                        <div class="flex items-center mt-8 text-gray-600 dark:text-gray-400">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <div class="ml-4 text-md tracking-wide font-semibold w-40">
+                                Acme Inc, Street, State,
+                                Postal Code
+                            </div>
+                        </div>
+
+                        <div class="flex items-center mt-4 text-gray-600 dark:text-gray-400">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <div class="ml-4 text-md tracking-wide font-semibold w-40">
+                                +34 1234567890
+                            </div>
+                        </div>
+
+                        <div class="flex items-center mt-2 text-gray-600 dark:text-gray-400">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <div class="ml-4 text-md tracking-wide font-semibold w-40">
+                                info@acme.org
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="p-6 flex flex-col justify-center">
+                        <div class="flex flex-col">
+                            <label for="name" class="hidden">Nombre</label>
+                            <input type="name" name="name" id="name" placeholder="Nombre" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none">
+                        </div>
+                        <div class="flex flex-col mt-2">
+                            <label for="email" class="hidden">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Email" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                            <label for="tel" class="hidden">Number</label>
+                            <input type="tel" name="tel" id="tel" placeholder="Número de teléfono" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none">
+                        </div>
+                        <button type="submit" class="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
+    <script src="/JS/script.js"></script>
+      <!-- fin contacto -->
+</body>
+</html>
