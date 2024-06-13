@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Question = ({ question, submitAnswer, handleClick }) => {
+const Question = ({ question, submitAnswer }) => {
     const [input, setInput] = useState('')
 
     const handleInput = (e) => {
@@ -22,7 +22,6 @@ const Question = ({ question, submitAnswer, handleClick }) => {
           onChange={handleInput}
         ></textarea>
         <button type="button" onClick={handleSubmit}>Submit</button>
-        <button type="button" onClick={handleClick}>Next</button>
       </>
     )
 }

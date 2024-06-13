@@ -24,5 +24,5 @@ export async function getResponse(question, baseAnswer, userAnswer) {
     model: "gpt-3.5-turbo",
   });
 
-  console.log(completion.choices[0].message.content)
+  return completion.choices[0].message.content
 }
