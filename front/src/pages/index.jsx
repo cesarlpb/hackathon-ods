@@ -6,7 +6,7 @@ const Index = () => {
 
     items.forEach((item, index) => {
         index++;
-        categories.push(<button className="category" idName={`id-${index}`} key={index}><a>{item}</a></button>)
+        categories.push(<button className="category" id={`${index}`} key={index}><a>{item}</a></button>)
     });
 
     return (
