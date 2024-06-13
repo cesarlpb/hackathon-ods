@@ -2,9 +2,9 @@ import React from 'react';
 
 const Login = () => {
     return (
-        <div>
+        <div id="login-container">
             <header>
-                <p>Login</p>
+                <h1>Login</h1>
             </header>
             <main>
                 <form>

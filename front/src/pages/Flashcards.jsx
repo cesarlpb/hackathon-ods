@@ -1,45 +1,32 @@
-import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import data from '../cards.json'; // Asegúrate de que esta ruta sea correcta
 
 const Flashcards = () => {
-  const [flashcardInput, setFlashcardInput] = useState('');
-  const [flashcards, setFlashcards] = useState([
-    {
-      "id": 1,
-      "title": "Flashcard 1",
-      "questions": [
-        "What year was Treasure Island published?",
-        "What genre does Treasure Island belong to?"
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Flashcard 2",
-      "questions": [
-        "What are some applications of mathematics in daily life?",
-        "Name some famous mathematicians."
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Flashcard 3",
-      "questions": [
-        "What are the causes of World War II?",
-        "What were the major events of World War II?"
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Flashcard 4",
-      "questions": [
-        "What are the latest advancements in technology?",
-        "How has technology impacted society?"
-      ]
+    const [flashcardInput, setFlashcardInput] = useState('');
+    const [flashcards, setFlashcards] = useState([]);
+    const [editingFlashcardId, setEditingFlashcardId] = useState(null);
+    const [newFlashcardQuestion, setNewFlashcardQuestion] = useState('');
+    const [newFlashcardAnswer, setNewFlashcardAnswer] = useState('');
+  
+
+  useEffect(() => {
+    fetchFlashcards();
+  }, []);
+
+  const fetchFlashcards = () => {
+    try {
+      console.log('Data from JSON:', data);
+      if (data.cards && Array.isArray(data.cards)) {
+        setFlashcards(data.cards);
+        console.log('Flashcards set:', data.cards);
+      } else {
+        throw new Error('Invalid data format');
+      }
+    } catch (error) {
+      console.error('Error fetching flashcards:', error);
     }
-  ]);
-  const [editingFlashcardId, setEditingFlashcardId] = useState(null);
-  const [newFlashcardTitle, setNewFlashcardTitle] = useState('');
-  const [newFlashcardQuestions, setNewFlashcardQuestions] = useState(['', '']);
+  };
 
   const handleInputChange = (e) => {
     setFlashcardInput(e.target.value);
@@ -49,8 +36,8 @@ const Flashcards = () => {
     if (flashcardInput.trim() !== '') {
       const newFlashcard = {
         id: flashcards.length + 1,
-        title: flashcardInput.trim(),
-        questions: []
+        question: flashcardInput.trim(),
+        answer: ''
       };
       setFlashcards([...flashcards, newFlashcard]);
       setFlashcardInput('');
@@ -62,23 +49,23 @@ const Flashcards = () => {
     setFlashcards(updatedFlashcards);
   };
 
-  const handleEditFlashcard = (id, newTitle, newQuestions) => {
+    const handleEditFlashcard = (id, newQuestion, newAnswer) => {
     const updatedFlashcards = flashcards.map(flashcard => {
       if (flashcard.id === id) {
-        return { ...flashcard, title: newTitle, questions: newQuestions };
+        return { ...flashcard, question: newQuestion, answer: newAnswer };
       }
       return flashcard;
     });
     setFlashcards(updatedFlashcards);
     setEditingFlashcardId(null);
-    setNewFlashcardTitle('');
-    setNewFlashcardQuestions(['', '']);
+    setNewFlashcardQuestion('');
+    setNewFlashcardAnswer('');
   };
 
-  const startEditingFlashcard = (id, currentTitle, currentQuestions) => {
+  const startEditingFlashcard = (id, currentQuestion, currentAnswer) => {
     setEditingFlashcardId(id);
-    setNewFlashcardTitle(currentTitle);
-    setNewFlashcardQuestions(currentQuestions);
+    setNewFlashcardQuestion(currentQuestion);
+    setNewFlashcardAnswer(currentAnswer);
   };
 
   return (
@@ -86,62 +73,56 @@ const Flashcards = () => {
       <header>
         <h1>Flashcards</h1>
         <Link to="/">
-            <button id="goToHome">Return to home</button>
+          <button id="goToHome">Return to home</button>
         </Link>
       </header>
       <main>
-            <section id="flashcardCreation-container">
-            <h2>Insert a new flashcard</h2>
-            <div id="newInput">
-                <input
-                type="text"
-                value={flashcardInput}
-                onChange={handleInputChange}
-                placeholder="Enter flashcard title"
-                />
-                <button onClick={handleAddFlashcard}>Add Flashcard</button>
-            </div>
+        <section id="flashcardCreation-container">
+          <h2>Insert a new flashcard</h2>
+          <div id="newInput">
+            <input
+              type="text"
+              value={flashcardInput}
+              onChange={handleInputChange}
+              placeholder="Enter flashcard question"
+            />
+            <button onClick={handleAddFlashcard}>Add Flashcard</button>
+          </div>
         </section>
         <section id="flashcardsDisplay">
-            {flashcards.map(flashcard => (
-            <div className="flashcard-item" key={flashcard.id}>
+          {flashcards.length > 0 ? (
+            flashcards.map(flashcard => (
+              <div className="flashcard-item" key={flashcard.id}>
                 {editingFlashcardId === flashcard.id ? (
-                <div>
+                  <div>
                     <input
-                    type="text"
-                    value={newFlashcardTitle}
-                    onChange={(e) => setNewFlashcardTitle(e.target.value)}
+                      type="text"
+                      value={newFlashcardQuestion}
+                      onChange={(e) => setNewFlashcardQuestion(e.target.value)}
                     />
                     <input
-                    type="text"
-                    value={newFlashcardQuestions[0]}
-                    onChange={(e) => setNewFlashcardQuestions([e.target.value, newFlashcardQuestions[1]])}
+                      type="text"
+                      value={newFlashcardAnswer}
+                      onChange={(e) => setNewFlashcardAnswer(e.target.value)}
                     />
-                    <input
-                    type="text"
-                    value={newFlashcardQuestions[1]}
-                    onChange={(e) => setNewFlashcardQuestions([newFlashcardQuestions[0], e.target.value])}
-                    />
-                    <button onClick={() => handleEditFlashcard(flashcard.id, newFlashcardTitle, newFlashcardQuestions)}>Save</button>
-                    <button onClick={() => { setEditingFlashcardId(null); setNewFlashcardTitle(''); setNewFlashcardQuestions(['', '']); }}>Cancel</button>
-                </div>
+                    <button onClick={() => handleEditFlashcard(flashcard.id, newFlashcardQuestion, newFlashcardAnswer)}>Save</button>
+                    <button onClick={() => { setEditingFlashcardId(null); setNewFlashcardQuestion(''); setNewFlashcardAnswer(''); }}>Cancel</button>
+                  </div>
                 ) : (
-                <div>
-                    <p>{flashcard.title}</p>
-                    <ul>
-                    {flashcard.questions.map((question, index) => (
-                        <li key={index}>{question}</li>
-                    ))}
-                    </ul>
-                    <button onClick={() => startEditingFlashcard(flashcard.id, flashcard.title, flashcard.questions)}>Edit</button>
+                  <div>
+                    <p>{flashcard.question}</p>
+                    <p>{flashcard.answer}</p>
+                    <button onClick={() => startEditingFlashcard(flashcard.id, flashcard.question, flashcard.answer)}>Edit</button>
                     <button onClick={() => handleDeleteFlashcard(flashcard.id)}>Delete</button>
-                </div>
+                  </div>
                 )}
-            </div>
-            ))}
+              </div>
+            ))
+          ) : (
+            <p>No flashcards available.</p>
+          )}
         </section>
       </main>
-      
     </div>
   );
 };
