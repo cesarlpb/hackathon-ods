@@ -1,5 +1,5 @@
 :root {
-  background-color: #d8efd5!important;
+  background-color: #d8efd5 !important;
 }
 #root {
   max-width: 1400px;
@@ -42,8 +42,8 @@ button:disabled {
 /* Página principal */
 #home-container div#home-container {
   border: 5px solid black;
-    border-radius: 30px;
-    padding: 1em;
+  border-radius: 30px;
+  padding: 1em;
 }
 #home-container section#selection-container {
   display: flex;

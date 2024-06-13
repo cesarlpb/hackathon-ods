@@ -10,7 +10,7 @@ const Index = () => {
         categories.push(<Link to="/room"><button className="category" id={`${index}`} key={index}><a>{item}</a></button></Link>)
     });
 
-    return (
+  return (
     <div id="home-container">
         <header>
             <h1 id="main-title">Room studio</h1>
@@ -38,7 +38,7 @@ const Index = () => {
             </aside>
         </main>
     </div>
-    )
-}
+  )
+};
 
-export default Index
+export default Index;
