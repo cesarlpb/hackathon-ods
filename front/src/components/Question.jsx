@@ -1,10 +1,14 @@
 import { useState } from "react"
 
-const Question = ({ question, handleSubmit, handleClick }) => {
+const Question = ({ question, submitAnswer, handleClick }) => {
     const [input, setInput] = useState('')
 
     const handleInput = (e) => {
-        setInput(e.target.value)
+      setInput(e.target.value)
+    }
+
+    const handleSubmit = () => {
+      submitAnswer(input)
     }
 
     return (
