@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=VT323&display=swap");
+
+/**
+ * Defines the default, heading, and emphasis font families used throughout the application.
+ * 
+ * The `--default-font` variable is set to the "Ubuntu Sans Mono" monospace font family.
+ * The `--heading-font` variable is set to the "Chakra Petch" sans-serif font family.
+ * The `--emphasis-font` variable is set to the "VT323" monospace font family.
+ * 
+ * These font variables are used to consistently apply the desired typography styles across the application.
+ */
+:root {
+    --default-font: "Ubuntu Sans Mono", monospace;
+    --heading-font: "Chakra Petch", sans-serif;
+    --emphasis-font: "VT323", monospace;
+    --background-color: #fafafaff;
+    --component-color: #c42021ff;
+    --heading-color: #ffbc0aff;
+    --accent-color: #568259ff;
+    --default-color: #1e1e1eff;
+    --nav-color: #fafafaff;
+    --nav-hover-color: #c42021ff;
+    --nav-dropdown-background-color: #fafafaff;
+    --nav-dropdown-color: #fafafaff;
+    --nav-dropdown-hover-color: #c42021ff;
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+    font-size: x-large;
+}
+
+a {
+    color: var(--default-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--default-color);
+    font-family: var(--default-font);
+}
+/* .bg-image{
+    background-image: url(/public/img/bg.png);
+    background-size: cover;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: top;
+} */
+
+.underline {
+    position: relative;
+    /* Agregado para posicionar correctamente el pseudo-elemento */
+}
+
+.underline:hover a:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--nav-hover-color);
+    visibility: visible;
+    width: 100%;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.underline:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--nav-hover-color);
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.underline:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+/**/

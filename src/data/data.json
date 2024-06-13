@@ -1,0 +1,460 @@
+{
+    "cyber": [
+        {
+            "unidad": "Fundamentos de Ciberseguridad",
+            "pasos": [
+                {
+                    "paso": "Introducción a la Ciberseguridad",
+                    "contenido": {
+                        "titulo": "Introduction to Cyber Security",
+                        "enlace": "https://www.youtube.com/watch?v=xyz1",
+                        "autor": "Simply Cyber",
+                        "descripcion": "Un video introductorio que cubre los conceptos básicos de la ciberseguridad."
+                    }
+                },
+                {
+                    "paso": "Principios de Seguridad de la Información",
+                    "contenido": {
+                        "titulo": "Information Security Basics",
+                        "enlace": "https://www.youtube.com/watch?v=xyz2",
+                        "autor": "Professor Messer",
+                        "descripcion": "Un video que introduce los principios fundamentales de la seguridad de la información."
+                    }
+                },
+                {
+                    "paso": "Conceptos Básicos de Redes",
+                    "contenido": {
+                        "titulo": "Computer Networking Full Course",
+                        "enlace": "https://www.youtube.com/watch?v=xyz3",
+                        "autor": "Neso Academy",
+                        "descripcion": "Un curso completo sobre conceptos básicos de redes, esencial para entender la ciberseguridad."
+                    }
+                },
+                {
+                    "paso": "Fundamentos de la Seguridad en Redes",
+                    "contenido": {
+                        "titulo": "Network Security",
+                        "enlace": "https://www.youtube.com/watch?v=xyz4",
+                        "autor": "Cisco",
+                        "descripcion": "Un video que cubre los fundamentos de la seguridad en redes."
+                    }
+                }
+            ]
+        },
+        {
+            "unidad": "Ataques y Amenazas",
+            "pasos": [
+                {
+                    "paso": "Tipos de Ataques Cibernéticos",
+                    "contenido": {
+                        "titulo": "Common Types of Cyber Attacks",
+                        "enlace": "https://www.youtube.com/watch?v=xyz5",
+                        "autor": "Simplilearn",
+                        "descripcion": "Un video que describe los tipos más comunes de ataques cibernéticos."
+                    }
+                },
+                {
+                    "paso": "Introducción a los Malwares",
+                    "contenido": {
+                        "titulo": "What is Malware?",
+                        "enlace": "https://www.youtube.com/watch?v=xyz6",
+                        "autor": "Security Baron",
+                        "descripcion": "Un video que proporciona una visión general sobre el malware y sus tipos."
+                    }
+                },
+                {
+                    "paso": "Ataques de Ingeniería Social",
+                    "contenido": {
+                        "titulo": "Social Engineering Attacks",
+                        "enlace": "https://www.youtube.com/watch?v=xyz7",
+                        "autor": "Network Chuck",
+                        "descripcion": "Un video que explica las técnicas comunes de ingeniería social y cómo prevenir estos ataques."
+                    }
+                },
+                {
+                    "paso": "Phishing y Cómo Detectarlo",
+                    "contenido": {
+                        "titulo": "Phishing Scams",
+                        "enlace": "https://www.youtube.com/watch?v=xyz8",
+                        "autor": "Techquickie",
+                        "descripcion": "Un video que explica el phishing y proporciona consejos para protegerse."
+                    }
+                }
+            ]
+        },
+        {
+            "unidad": "Seguridad de Aplicaciones y Sistemas",
+            "pasos": [
+                {
+                    "paso": "Seguridad en el Desarrollo de Software",
+                    "contenido": {
+                        "titulo": "Secure Coding Practices",
+                        "enlace": "https://www.youtube.com/watch?v=xyz9",
+                        "autor": "Google Developers",
+                        "descripcion": "Un video que enseña prácticas seguras en el desarrollo de software."
+                    }
+                },
+                {
+                    "paso": "Seguridad en Aplicaciones Web",
+                    "contenido": {
+                        "titulo": "OWASP Top 10 Explained",
+                        "enlace": "https://www.youtube.com/watch?v=xyza",
+                        "autor": "InfoSec Resources",
+                        "descripcion": "Un video que explica los riesgos de seguridad más críticos en aplicaciones web según OWASP."
+                    }
+                },
+                {
+                    "paso": "Hardening de Sistemas Operativos",
+                    "contenido": {
+                        "titulo": "System Hardening Guide",
+                        "enlace": "https://www.youtube.com/watch?v=xyzb",
+                        "autor": "Null Byte",
+                        "descripcion": "Un video que explica cómo fortalecer la seguridad de los sistemas operativos."
+                    }
+                },
+                {
+                    "paso": "Seguridad en la Nube",
+                    "contenido": {
+                        "titulo": "Cloud Security Basics",
+                        "enlace": "https://www.youtube.com/watch?v=xyzc",
+                        "autor": "Google Cloud Platform",
+                        "descripcion": "Un video que cubre los conceptos básicos de la seguridad en la nube."
+                    }
+                }
+            ]
+        },
+        {
+            "unidad": "Prácticas y Herramientas de Ciberseguridad",
+            "pasos": [
+                {
+                    "paso": "Uso de Herramientas de Ciberseguridad",
+                    "contenido": {
+                        "titulo": "Kali Linux Tutorial For Beginners",
+                        "enlace": "https://www.youtube.com/watch?v=xyzd",
+                        "autor": "HackerSploit",
+                        "descripcion": "Un tutorial de Kali Linux para principiantes, una de las herramientas más utilizadas en ciberseguridad."
+                    }
+                },
+                {
+                    "paso": "Análisis de Vulnerabilidades",
+                    "contenido": {
+                        "titulo": "How to Perform a Vulnerability Assessment",
+                        "enlace": "https://www.youtube.com/watch?v=xyze",
+                        "autor": "The Cyber Mentor",
+                        "descripcion": "Un video que enseña cómo realizar evaluaciones de vulnerabilidades."
+                    }
+                },
+                {
+                    "paso": "Gestión de Incidentes",
+                    "contenido": {
+                        "titulo": "Incident Response Plan",
+                        "enlace": "https://www.youtube.com/watch?v=xyzf",
+                        "autor": "Infosec",
+                        "descripcion": "Un video que cubre la gestión de incidentes y la respuesta ante ciberataques."
+                    }
+                },
+                {
+                    "paso": "Forense Digital",
+                    "contenido": {
+                        "titulo": "Introduction to Digital Forensics",
+                        "enlace": "https://www.youtube.com/watch?v=xyzg",
+                        "autor": "Null Byte",
+                        "descripcion": "Un video sobre forense digital para profesionales de la ciberseguridad."
+                    }
+                }
+            ]
+        }
+    ],
+    "analyst": [
+        {
+            "unidad": "Fundamentos del Análisis de Datos",
+            "pasos": [
+                {
+                    "paso": "Introducción al Análisis de Datos con Python y Pandas",
+                    "contenido": {
+                        "titulo": "Curso de Introducción a la Ciencia de Datos en Python de Coursera",
+                        "enlace": "https://www.coursera.org/learn/python-data-analysis",
+                        "autor": "Simply Cyber",
+                        "descripcion": "Un curso que proporciona una introducción completa al análisis de datos utilizando Python y la biblioteca Pandas. Aprenderás a manipular y analizar datos reales y presentar tus hallazgos de manera efectiva."
+                    }
+                },
+                {
+                    "paso": "Principios Básicos de Estadística y Análisis Exploratorio de Datos (EDA)",
+                    "contenido": {
+                        "titulo": "Curso de Estadística para Análisis de Datos en Udacity",
+                        "enlace": "https://www.udacity.com/course/intro-to-statistics--st101",
+                        "autor": "Professor Messer",
+                        "descripcion": "Un curso que te enseñará los principios básicos de la estadística y cómo aplicarlos al análisis de datos. Aprenderás a realizar análisis exploratorio de datos utilizando técnicas estadísticas y visuales."
+                    }
+                },
+                {
+                    "paso": "Análisis de Datos Avanzado",
+                    "contenido": {
+                        "titulo": "Análisis Exploratorio de Datos con Python en Kaggle",
+                        "enlace": "https://www.kaggle.com/learn/exploratory-data-analysis",
+                        "autor": "Neso Academy",
+                        "descripcion": "Un tutorial que te proporciona una guía paso a paso para realizar un análisis exploratorio de datos avanzado utilizando Python. Aprenderás técnicas avanzadas para explorar y comprender conjuntos de datos complejos."
+                    }
+                }
+            ]
+        },
+        {
+            "unidad": "Análisis Avanzado de Datos",
+            "pasos": [
+                {
+                    "paso": "Análisis Estadístico Avanzado y Modelado Predictivo",
+                    "contenido": {
+                        "titulo": "Curso de Aprendizaje Automático de Andrew Ng en Coursera",
+                        "enlace": "https://www.coursera.org/learn/machine-learning",
+                        "autor": "Andrew Ng",
+                        "descripcion": "Este curso te enseñará los conceptos fundamentales del aprendizaje automático, incluidos algoritmos de clasificación y regresión. Aprenderás a aplicar técnicas de modelado predictivo a conjuntos de datos del mundo real."
+                    }
+                },
+                {
+                    "paso": "Análisis Exploratorio de Datos (EDA) Avanzado",
+                    "contenido": {
+                        "titulo": "Tutorial de Análisis Exploratorio de Datos con Python en Kaggle",
+                        "enlace": "https://www.kaggle.com/learn/exploratory-data-analysis",
+                        "autor": "Kaggle",
+                        "descripcion": "Este tutorial te proporciona una guía paso a paso para realizar un análisis exploratorio de datos avanzado utilizando Python. Aprenderás técnicas avanzadas para explorar y comprender conjuntos de datos complejos."
+                    }
+                },
+                {
+                    "paso": "Aplicaciones Prácticas y Proyectos Avanzados",
+                    "contenido": {
+                        "titulo": "Proyectos de Ciencia de Datos en Kaggle",
+                        "enlace": "https://www.kaggle.com/datasets",
+                        "autor": "Kaggle",
+                        "descripcion": "Kaggle ofrece una amplia variedad de conjuntos de datos y competiciones de ciencia de datos para practicar tus habilidades. Participa en proyectos prácticos y desafiantes para aplicar y mejorar tu conocimiento en análisis de datos."
+                    }
+                }
+            ]
+        },
+        {
+            "unidad": "Especialización en Áreas de Interés",
+            "pasos": [
+                {
+                    "paso": "Especialización en Áreas de Interés en Análisis de Datos",
+                    "contenido": {
+                        "titulo": "Cursos de Especialización en Ciencia de Datos en Coursera",
+                        "enlace": "https://www.coursera.org/specializations/data-science",
+                        "autor": "Coursera",
+                        "descripcion": "Coursera ofrece una variedad de cursos de especialización en áreas específicas de análisis de datos, como análisis de texto, análisis de imágenes y aprendizaje profundo. Elige cursos que se alineen con tus intereses y objetivos profesionales."
+                    }
+                },
+                {
+                    "paso": "Desarrollo de Habilidades Complementarias",
+                    "contenido": {
+                        "titulo": "Cursos de Análisis de Datos en LinkedIn Learning",
+                        "enlace": "https://www.linkedin.com/learning/topics/data-analysis",
+                        "autor": "LinkedIn Learning",
+                        "descripcion": "LinkedIn Learning ofrece una amplia gama de cursos de análisis de datos, desde fundamentos hasta temas avanzados. Desarrolla habilidades complementarias en áreas como visualización de datos, análisis de Big Data y análisis de negocios."
+                    }
+                },
+                {
+                    "paso": "Experiencia Laboral y Desarrollo de Carrera",
+                    "contenido": {
+                        "titulo": "Plataforma de Freelance Upwork",
+                        "enlace": "https://www.upwork.com/",
+                        "autor": "Upwork",
+                        "descripcion": "Obtén experiencia laboral relevante a través de proyectos freelance en plataformas como Upwork. Busca oportunidades de trabajo en roles relacionados con el análisis de datos y construye un portafolio sólido que muestre tus habilidades y logros."
+                    }
+                }
+            ]
+        },
+        {
+            "unidad": "Aplicaciones Prácticas y Proyectos",
+            "pasos": [
+                {
+                    "paso": "Aplicaciones Prácticas y Proyectos en Análisis de Datos",
+                    "contenido": {
+                        "titulo": "Proyectos de Ciencia de Datos en Kaggle",
+                        "enlace": "https://www.kaggle.com/datasets",
+                        "autor": "Kaggle",
+                        "descripcion": "Kaggle ofrece una amplia variedad de conjuntos de datos y competiciones de ciencia de datos para practicar tus habilidades. Participa en proyectos prácticos y desafiantes para aplicar y mejorar tu conocimiento en análisis de datos."
+                    }
+                },
+                {
+                    "paso": "Participación en Competencias de Ciencia de Datos",
+                    "contenido": {
+                        "titulo": "Competencias de Ciencia de Datos en Kaggle",
+                        "enlace": "https://www.kaggle.com/competitions",
+                        "autor": "Kaggle",
+                        "descripcion": "Participa en competiciones de ciencia de datos en Kaggle para aplicar tus habilidades en análisis de datos y aprender de la comunidad. Compite con otros profesionales y demuestra tu experiencia en análisis de datos."
+                    }
+                },
+                {
+                    "paso": "Desarrollo de Proyectos Personales",
+                    "contenido": {
+                        "titulo": "Desarrollo de Proyectos Personales en Análisis de Datos",
+                        "enlace": "https://towardsdatascience.com/5-tips-to-build-a-data-science-portfolio-that-will-get-you-hired-19e844f663db",
+                        "autor": "Towards Data Science",
+                        "descripcion": "Desarrolla proyectos personales en análisis de datos para mostrar tus habilidades y experiencia a posibles empleadores. Crea un portafolio sólido que destaque tu capacidad para resolver problemas y generar ideas innovadoras."
+                    }
+                }
+            ]
+        }
+    ],
+    "dev": [
+        {
+            "unidad": "Introducción a la Programación",
+            "pasos": [
+                {
+                    "paso": "Conceptos Básicos de Programación",
+                    "contenido": {
+                        "titulo": "Curso de Introducción a la Programación en Codecademy",
+                        "enlace": "https://www.codecademy.com/learn/introduction-to-javascript",
+                        "autor": "Codecademy",
+                        "descripcion": "Este curso te introduce a los conceptos fundamentales de la programación utilizando JavaScript como lenguaje de ejemplo. Aprenderás sobre variables, operadores, estructuras de control y funciones."
+                    }
+                },
+                {
+                    "paso": "Estructuras de Datos y Algoritmos",
+                    "contenido": {
+                        "titulo": "Curso de Estructuras de Datos y Algoritmos en Coursera",
+                        "enlace": "https://www.coursera.org/learn/algorithms-part1",
+                        "autor": "Princeton University",
+                        "descripcion": "Este curso te enseñará sobre estructuras de datos comunes y algoritmos fundamentales utilizados en programación. Aprenderás cómo seleccionar y aplicar las estructuras de datos y algoritmos adecuados para resolver problemas de manera eficiente."
+                    }
+                },
+                {
+                    "paso": "Programación Orientada a Objetos",
+                    "contenido": {
+                        "titulo": "Curso de Programación Orientada a Objetos en Udacity",
+                        "enlace": "https://www.udacity.com/course/object-oriented-javascript--ud711",
+                        "autor": "Udacity",
+                        "descripcion": "Aprende los principios de la programación orientada a objetos (OOP) y cómo aplicarlos en el desarrollo de software. Este curso utiliza JavaScript como lenguaje de ejemplo."
+                    }
+                }
+            ]
+        },
+        {
+            "unidad": "Fundamentos del Análisis de Datos",
+            "pasos": [
+                {
+                    "paso": "Introducción al Análisis de Datos con Python y Pandas",
+                    "contenido": {
+                        "titulo": "Curso de Introducción a la Ciencia de Datos en Python de Coursera",
+                        "enlace": "https://www.coursera.org/learn/python-data-analysis",
+                        "autor": "Simply Cyber",
+                        "descripcion": "Un curso que proporciona una introducción completa al análisis de datos utilizando Python y la biblioteca Pandas. Aprenderás a manipular y analizar datos reales y presentar tus hallazgos de manera efectiva."
+                    }
+                },
+                {
+                    "paso": "Principios Básicos de Estadística y Análisis Exploratorio de Datos (EDA)",
+                    "contenido": {
+                        "titulo": "Curso de Estadística para Análisis de Datos en Udacity",
+                        "enlace": "https://www.udacity.com/course/intro-to-statistics--st101",
+                        "autor": "Professor Messer",
+                        "descripcion": "Un curso que te enseñará los principios básicos de la estadística y cómo aplicarlos al análisis de datos. Aprenderás a realizar análisis exploratorio de datos utilizando técnicas estadísticas y visuales."
+                    }
+                },
+                {
+                    "paso": "Análisis de Datos Avanzado",
+                    "contenido": {
+                        "titulo": "Análisis Exploratorio de Datos con Python en Kaggle",
+                        "enlace": "https://www.kaggle.com/learn/exploratory-data-analysis",
+                        "autor": "Neso Academy",
+                        "descripcion": "Un tutorial que te proporciona una guía paso a paso para realizar un análisis exploratorio de datos avanzado utilizando Python. Aprenderás técnicas avanzadas para explorar y comprender conjuntos de datos complejos."
+                    }
+                }
+            ]
+        },
+        {
+            "unidad": "Análisis Avanzado de Datos",
+            "pasos": [
+                {
+                    "paso": "Análisis Estadístico Avanzado y Modelado Predictivo",
+                    "contenido": {
+                        "titulo": "Curso de Aprendizaje Automático de Andrew Ng en Coursera",
+                        "enlace": "https://www.coursera.org/learn/machine-learning",
+                        "autor": "Andrew Ng",
+                        "descripcion": "Este curso te enseñará los conceptos fundamentales del aprendizaje automático, incluidos algoritmos de clasificación y regresión. Aprenderás a aplicar técnicas de modelado predictivo a conjuntos de datos del mundo real."
+                    }
+                },
+                {
+                    "paso": "Análisis Exploratorio de Datos (EDA) Avanzado",
+                    "contenido": {
+                        "titulo": "Tutorial de Análisis Exploratorio de Datos con Python en Kaggle",
+                        "enlace": "https://www.kaggle.com/learn/exploratory-data-analysis",
+                        "autor": "Kaggle",
+                        "descripcion": "Este tutorial te proporciona una guía paso a paso para realizar un análisis exploratorio de datos avanzado utilizando Python. Aprenderás técnicas avanzadas para explorar y comprender conjuntos de datos complejos."
+                    }
+                },
+                {
+                    "paso": "Aplicaciones Prácticas y Proyectos Avanzados",
+                    "contenido": {
+                        "titulo": "Proyectos de Ciencia de Datos en Kaggle",
+                        "enlace": "https://www.kaggle.com/datasets",
+                        "autor": "Kaggle",
+                        "descripcion": "Kaggle ofrece una amplia variedad de conjuntos de datos y competiciones de ciencia de datos para practicar tus habilidades. Participa en proyectos prácticos y desafiantes para aplicar y mejorar tu conocimiento en análisis de datos."
+                    }
+                }
+            ]
+        },
+        {
+            "unidad": "Especialización en Áreas de Interés",
+            "pasos": [
+                {
+                    "paso": "Especialización en Áreas de Interés en Análisis de Datos",
+                    "contenido": {
+                        "titulo": "Cursos de Especialización en Ciencia de Datos en Coursera",
+                        "enlace": "https://www.coursera.org/specializations/data-science",
+                        "autor": "Coursera",
+                        "descripcion": "Coursera ofrece una variedad de cursos de especialización en áreas específicas de análisis de datos, como análisis de texto, análisis de imágenes y aprendizaje profundo. Elige cursos que se alineen con tus intereses y objetivos profesionales."
+                    }
+                },
+                {
+                    "paso": "Desarrollo de Habilidades Complementarias",
+                    "contenido": {
+                        "titulo": "Cursos de Análisis de Datos en LinkedIn Learning",
+                        "enlace": "https://www.linkedin.com/learning/topics/data-analysis",
+                        "autor": "LinkedIn Learning",
+                        "descripcion": "LinkedIn Learning ofrece una amplia gama de cursos de análisis de datos, desde fundamentos hasta temas avanzados. Desarrolla habilidades complementarias en áreas como visualización de datos, análisis de Big Data y análisis de negocios."
+                    }
+                },
+                {
+                    "paso": "Experiencia Laboral y Desarrollo de Carrera",
+                    "contenido": {
+                        "titulo": "Plataforma de Freelance Upwork",
+                        "enlace": "https://www.upwork.com/",
+                        "autor": "Upwork",
+                        "descripcion": "Obtén experiencia laboral relevante a través de proyectos freelance en plataformas como Upwork. Busca oportunidades de trabajo en roles relacionados con el análisis de datos y construye un portafolio sólido que muestre tus habilidades y logros."
+                    }
+                }
+            ]
+        },
+        {
+            "unidad": "Aplicaciones Prácticas y Proyectos",
+            "pasos": [
+                {
+                    "paso": "Aplicaciones Prácticas y Proyectos en Análisis de Datos",
+                    "contenido": {
+                        "titulo": "Proyectos de Ciencia de Datos en Kaggle",
+                        "enlace": "https://www.kaggle.com/datasets",
+                        "autor": "Kaggle",
+                        "descripcion": "Kaggle ofrece una amplia variedad de conjuntos de datos y competiciones de ciencia de datos para practicar tus habilidades. Participa en proyectos prácticos y desafiantes para aplicar y mejorar tu conocimiento en análisis de datos."
+                    }
+                },
+                {
+                    "paso": "Participación en Competencias de Ciencia de Datos",
+                    "contenido": {
+                        "titulo": "Competencias de Ciencia de Datos en Kaggle",
+                        "enlace": "https://www.kaggle.com/competitions",
+                        "autor": "Kaggle",
+                        "descripcion": "Participa en competiciones de ciencia de datos en Kaggle para aplicar tus habilidades en análisis de datos y aprender de la comunidad. Compite con otros profesionales y demuestra tu experiencia en análisis de datos."
+                    }
+                },
+                {
+                    "paso": "Desarrollo de Proyectos Personales",
+                    "contenido": {
+                        "titulo": "Desarrollo de Proyectos Personales en Análisis de Datos",
+                        "enlace": "https://towardsdatascience.com/5-tips-to-build-a-data-science-portfolio-that-will-get-you-hired-19e844f663db",
+                        "autor": "Towards Data Science",
+                        "descripcion": "Desarrolla proyectos personales en análisis de datos para mostrar tus habilidades y experiencia a posibles empleadores. Crea un portafolio sólido que destaque tu capacidad para resolver problemas y generar ideas innovadoras."
+                    }
+                }
+            ]
+        }
+    ]
+}

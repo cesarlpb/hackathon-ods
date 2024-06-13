@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/layout.astro";
+import data from "../../data/data.json";
+import Unidad from "../../components/unidad.astro";
+const roadmap = data.cyber;
+---
+
+<Layout>
+    <div id="cyber" class="vh-100 p-5">
+        <h1>Roadmap Ciberseguridad</h1>
+        {
+            roadmap.map((paso) => (
+                <Unidad title={paso.unidad} pasos={paso.pasos} />
+            ))
+        }
+    </div>
+</Layout>
+
+<style>
+    #cyber {
+        margin-top: 20px;
+    }
+</style>

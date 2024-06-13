@@ -1,0 +1,120 @@
+---
+import BaseController from "../controllers/BaseController";
+import CourseController from "../controllers/CourseController";
+import UserController from "../controllers/UserController";
+let analystController = new CourseController("mj97hqc55wg51mo", "analyst");
+let usersAndAnalyst = await analystController.getAll();
+let cyberController= new CourseController("medaapjtitzwxtf","cyber");
+let usersCyber= await cyberController.getAll();
+let devController= new CourseController("mfwt7k74aqa4waf","dev");
+let usersDev= await devController.getAll();
+import data from "../data/data.json";
+let users = new UserController();
+
+//crear usuario
+//seleccionar un curso (campo único)
+//primero las unidades
+
+document.addEventListener('DOMContentLoaded', function() {
+    const registrationForm = document.getElementById('registrationForm');
+
+    registrationForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const nameU = document.getElementById('name');
+        const dniU = document.getElementById('dni');
+        const emailU = document.getElementById('email');
+        const passU = document.getElementById('pass');
+
+        try {
+            const newUser = await users.createUser(nameU, dniU, passU, emailU);
+            console.log("Usuario registrado:", newUser);
+            // Aquí puedes redirigir al usuario a otra página o mostrar un mensaje de éxito
+        } catch (error) {
+            console.error("Error al registrar el usuario:", error);
+            // Aquí puedes mostrar un mensaje de error al usuario
+        }
+    });
+});
+
+function selectCurs(opcion){
+    let unidad;
+    if(opcion === "analyst"){
+        unidad = data.analyst;
+    }else if(opcion==="cyber"){
+        unidad = data.cyber;
+    }else if(opcion==="dev"){
+       unidad = data.dev;
+    } return unidad;
+} 
+
+function selectStep(unidad, pasoAnterior) {
+    // Buscar la unidad
+    const unidadEncontrada = data[unidad];
+    if (!unidadEncontrada) {
+        console.error("Esa unidad no existe");
+        return;
+    }
+    // Encontrar el índice del paso anterior
+    const indicePasoAnterior = unidadEncontrada.findIndex(curso => curso.unidad === pasoAnterior);
+    if (indicePasoAnterior === -1) {
+        console.error("No hay paso anterior");
+        return;
+    }
+    // Devolver el próximo paso después del paso anterior
+    const siguientePasoIndex = indicePasoAnterior + 1;
+    if (siguientePasoIndex >= unidadEncontrada.length) {
+        console.error("Unidad finalizada");
+        return;
+    }
+
+    return unidadEncontrada[siguientePasoIndex];
+}
+
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+</head>
+<body>
+    <h1>Registro de Usuario</h1>
+    <form id="registrationForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" required><br><br>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="pass" name="pass" required><br><br>
+        
+        <button type="submit">Registrarse</button>
+    </form>
+    
+    <h1>Selección de Curso y Paso</h1>
+    <form id="courseSelectionForm">
+        <label for="courseSelect">Curso:</label>
+        <select id="courseSelect" name="course">
+            <option value="analyst">Analista de Datos</option>
+            <option value="cyber">Ciberseguridad</option>
+            <option value="dev">Desarrollo de Software</option>
+        </select>
+        <br>
+        <label for="stepSelect">Paso:</label>
+        <select id="stepSelect" name="step" disabled>
+            <option value="" selected disabled>Primero selecciona un curso</option>
+        </select>
+        <br><br>
+        <button type="submit" disabled>Continuar</button>
+    </form>
+    <script src="crearUser.js"></script>
+</body>
+</html>
+

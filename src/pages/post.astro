@@ -1,0 +1,20 @@
+---
+import UserController from "../controllers/UserController.js";
+
+
+if (Astro.request.method === "POST") {
+  const UserControllerInstance = new UserController();
+
+  const data = await Astro.request.formData();
+  // console.log(data);
+
+  let nombre = data.get("name");
+  let email = data.get("email");
+  let dni = data.get("dni");
+  let pass = data.get("pass");
+
+  await UserControllerInstance.createUser(nombre, email, dni, pass);
+
+  return Astro.redirect("/");
+} 
+---

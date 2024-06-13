@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/layout.astro";
+import data from "../../data/data.json";
+import Unidad from "../../components/unidad.astro";
+const roadmap = data.analyst;
+---
+
+<Layout>
+    <div id="analyst" class="vh-100 p-5">
+        <h1>Roadmap Analista de datos</h1>
+        {
+            roadmap.map((paso) => (
+                <Unidad title={paso.unidad} pasos={paso.pasos} />
+            ))
+        }
+    </div>
+</Layout>
+
+
+<style>
+    #analyst{
+        margin-top: 20px;
+    }
+</style>
+
