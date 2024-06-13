@@ -1,0 +1,44 @@
+---
+import Layout from '../../Layouts/Layout.astro';
+import { Chart } from 'chart.js';
+
+const API_URL = 'https://world.openfoodfacts.org/api/v3/product/8434165466333';
+
+const response = await fetch(API_URL)
+const data = await response.json()
+---
+
+<Layout>
+
+    <div class="w-96 flex place-content-center">
+        <canvas id="myChart"></canvas>
+    </div>
+
+</Layout>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Carbohydrates', 'Sugars', 'Salt', 'Fat'],
+      datasets: [{
+        label: '# of Votes',
+        data: [2, 9, 4, 5],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+ 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
