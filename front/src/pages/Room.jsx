@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import data from '../cards.json'
+import Question from "../components/Question"
 
 const Room = () => {
     const [cardNum, setCardNum] = useState(0)
@@ -16,10 +17,7 @@ const Room = () => {
     return (
         <div>
           <h1>ROOM 1</h1>
-          <h2>{flashcard.question}</h2>
-          <textarea id="answer" cols={50} rows={15}></textarea>
-          <button type="button">Submit</button>
-          <button type="button" onClick={handleClick}>Next</button>
+          <Question question={flashcard.question} handleClick={handleClick} />
         </div>
     )
 }
