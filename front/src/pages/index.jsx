@@ -12,15 +12,20 @@ const Index = () => {
     return (
     <div id="home-container">
         <header>
-            <h1>Room studio</h1>
+            <h1 id="main-title">Room studio</h1>
         </header>
         <main>
             <section id="selection-container">
                 {categories}
             </section>
-            <aside id="creation-container">
-                <button id="newCategory">Create new category</button>
-                <button id="newFlashCard">Create new flashcard</button>
+            <aside id="aside-container">
+                <div id="create-container">
+                    <button id="newCategory">Create new category</button>
+                    <button id="newFlashCard">Create new flashcard</button>
+                </div>
+                <div id="userActions-container">
+                    <button id="closeSession">Close session</button>
+                </div>
             </aside>
         </main>
     </div>

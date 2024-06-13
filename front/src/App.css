@@ -6,6 +6,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 main {
   display: flex;
@@ -24,7 +25,25 @@ section#section-container {
   flex-wrap: wrap;
   justify-content: center;
   width: 70%;
+  height: 400px;
+  align-items: center;
+  align-content: center;
 }
-aside#creation-container {
+aside#aside-container {
   border-left: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+h1#main-title{
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+button.category {
+  width: 30%;
+  margin: 1em;
+}
+aside#aside-container button {
+  margin: 1em 0.5em;
 }
