@@ -1,24 +1,34 @@
 {
-  "cards": [
-    {
-      "question": "¿Cuál es la capital de España?",
-      "answer": "Madrid"
-    },
-    {
-      "question": "¿Cuál es la capital de Francia?",
-      "answer": "París"
-    },
-    {
-      "question": "¿Cuál es la capital de Brasil?",
-      "answer": "Río de Janeiro"
-    },
-    {
-      "question": "¿Cuál es la capital de China?",
-      "answer": "Pekín"
-    },
-    {
-      "question": "¿Cuál es la capital de Rusia?",
-      "answer": "Moscú"
-    }
-  ]
+    "cards": [
+        {   
+            "id": 1,
+            "question": "¿Cuál es la capital de España?",
+            "answer": "Madrid"
+        },
+        {
+            "id": 2,
+            "question": "¿Cuál es la capital de Francia?",
+            "answer": "París"
+        },
+        {
+            "id": 3,
+            "question": "¿Cuál es la capital de Brasil?",
+            "answer": "Brasilia"
+        },
+        {
+            "id": 4,
+            "question": "¿Cuál es la capital de China?",
+            "answer": "Pekín"
+        },
+        {
+            "id": 5,
+            "question": "¿Cuál es la capital de Rusia?",
+            "answer": "Moscú"
+        },
+        {
+            "id": 6,
+            "question": "¿Cuántos km hay desde España hasta Francia aproximadamente?",
+            "answer": "500"
+        }
+    ]
 }

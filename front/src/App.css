@@ -6,25 +6,125 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 main {
   display: flex;
   border: 5px solid black;
   border-radius: 20px;
+  justify-content: center;
 }
-
+button {
+  background-color: #95C495!important;
+  color: white;
+  margin: 1em;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#newInput {
+  display: flex;
+  flex-direction: column;
+}
+/* Login */
+#login-container main {
+  border: none;
+}
+#login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#login-container input {
+  margin: 1em;
+}
 /* Página principal */
-div#home-container {
+#home-container div#home-container {
   border: 5px solid black;
   border-radius: 30px;
   padding: 1em;
 }
-section#section-container {
+#home-container section#selection-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 70%;
+  width: 60%;
+  height: 400px;
+  align-items: center;
+  align-content: center;
 }
-aside#creation-container {
+#home-container aside#aside-container {
   border-left: 5px solid black;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#home-container h1#main-title{
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+#home-container button.category {
+  width: 250px;
+  margin: 1em;
+  background-color: #95C495;
+  transition: .3s ease-out;
+}
+#home-container button.category:hover {
+  width: 300px;
+  transition: .3s ease-out;
+}
+#home-container .category a {
+  color: white;
+  text-decoration: none;
+}
+#home-container aside#aside-container button {
+  margin: 1em 0.5em;
+  background-color: #95C495;
+  color: white;
+}
+#home-container div#create-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#home-container div#createRoom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#home-container button#newRoom {
+  margin-bottom: 0 !important;
+}
+#home-container p#disclaimer {
+  margin-top: 0.5em;
+  color: #ab0000;
+  font-size: 12px;
+}
+/* Categories / Flashcards */
+
+#categories-container button {
+  margin: 1em;
+}
+.flashcard-item div, .categories-item div {
+  display: flex;
+  flex-direction: column;
+}
+#flashcards-container input[type="text"], #categories-container input[type="text"] {
+  padding: 1em;
+  text-align: center;
+}
+#flashcards-container main, #categories-container main {
+  border: none;
+  display: block;
+}
+
+/* Room */
+div#question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
 }
