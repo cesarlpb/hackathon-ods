@@ -1,26 +1,25 @@
 import React from 'react';
 
 const Index = () => {
-    const items = ["Literatura", "Matemáticas", "Historia", "Tecnología"];
+    const items = ["Literature", "Mathematics", "History", "Technology"];
     const categories = [];
 
     items.forEach((item, index) => {
-        categories.push(<li key={index}><a>{item}</a></li>)
+        categories.push(<button key={index}><a>{item}</a></button>)
     });
 
     return (
     <div id="home-container">
         <header>
-            <h1>Sala de estudio</h1>
+            <h1>Room studio</h1>
         </header>
         <main>
             <section id="selection-container">
-                <p>Hola</p>
                 {categories}
             </section>
             <aside id="creation-container">
-                <button id="newCategory"></button>
-                <button id="newFlashCard"></button>
+                <button id="newCategory">Create new category</button>
+                <button id="newFlashCard">Create new flashcard</button>
             </aside>
         </main>
     </div>
