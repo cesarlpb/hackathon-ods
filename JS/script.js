@@ -25,9 +25,11 @@ numbers.forEach((number) => {
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 
-menuToggle.addEventListener('click', function () {
-  mobileMenu.classList.toggle('hidden');
-});
+if (menuToggle && mobileMenu){
+    menuToggle.addEventListener('click', function () {
+    mobileMenu.classList.toggle('hidden');
+    });
+}   
 function hiddenMenu() {
     document.getElementById("menu-lateral").style.display = 'none';
 }
