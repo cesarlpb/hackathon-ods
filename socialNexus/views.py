@@ -1,4 +1,8 @@
 from django.shortcuts import render
 
 def index(request):
-  return render(request, "index.html")
+  usuario = {
+    "nombre": "Pepe",
+    "apellido": "Rana",   
+  }
+  return render(request, "index.html", context=usuario)
